@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* ------------------------  FONT  ----------------------------------*/
+
+@font-face {
+    font-family: 'tekobold';
+    src: url('teko-bold-webfont.woff2') format('woff2'),
+         url('teko-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tekolight';
+    src: url('font/teko/teko-light-webfont.woff2') format('woff2'),
+         url('font/teko/teko-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tekomedium';
+    src: url('font/teko/teko-medium-webfont.woff2') format('woff2'),
+         url('font/teko/teko-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tekoregular';
+    src: url('teko-regular-webfont.woff2') format('woff2'),
+         url('teko-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'tekosemibold';
+    src: url('teko-semibold-webfont.woff2') format('woff2'),
+         url('teko-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: '04b30';
+    src: url('font/pixel04/04b_30__-webfont.woff2') format('woff2'),
+         url('font/pixel04/04b_30__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ------------------------------------------------------------------*/
+
+
+body {
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 100px;
+    font-size: 6dvw;
+    font-family: '04b30';
+    letter-spacing: 10px;
+    font-weight:900;
+    color: transparent;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    background-size: 200%;
+    background-position: -200%;
+
+
+    transition-duration: 500ms;
+
+    animation: animatedText 10s infinite alternate-reverse;
+    
+}
+
+h1:hover {
+    transition-duration: 500ms;
+    animation: animatedText 1s infinite alternate-reverse;
+    letter-spacing: -5px;
+
+}
+
+@keyframes animatedText {
+    /* from{
+        background-position: 0%;
+    } */
+    to{
+        background-position: 100%;
+    }
+}
+
+.logbutton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logbutton li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.logbutton li a {
+    display: flex;
+    justify-content: center;
+
+    color: rgb(255, 255, 255);
+    font-family: 'tekolight';
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    width: 100px;
+    padding: 12px 100px;
+    
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgb(62, 33, 227), rgb(255, 0, 195));
+    border-image-slice: 1;
+
+    background: linear-gradient(90deg, rgb(62, 33, 227), rgb(255, 0, 195)) no-repeat right bottom / 0 var(--bg-h);
+
+    transition: background-size 350ms;
+    --bg-h: 100%;
+  }
+  
+  .logbutton li a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+  }
+

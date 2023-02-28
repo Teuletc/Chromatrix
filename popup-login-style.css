@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* ------------------------  FONT  ----------------------------------*/
+
+@font-face {
+    font-family: 'font/04b30';
+    src: url('04b_30__-webfont.woff2') format('woff2'),
+         url('04b_30__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'font/operateur8/pixel_operator_8bold';
+    src: url('pixeloperator8-bold-webfont.woff2') format('woff2'),
+         url('pixeloperator8-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ------------------------------------------------------------------*/
+
+
+body {
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
